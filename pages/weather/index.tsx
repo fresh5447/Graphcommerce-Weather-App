@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
 import { StoreConfigDocument } from '@graphcommerce/magento-store'
 import { PageOptions } from '@graphcommerce/framer-next-pages'
-import CircularProgress from '@mui/material/CircularProgress';
+import {CircularProgress, Typography, Box} from '@mui/material';
+;
+
 
 import {
   GetStaticProps,
@@ -90,24 +92,19 @@ function Weather() {
     fetchWeather();
   }, []);
 
+  if (error) return (
+    <Typography variant="h5" align="center" marginTop={10}>
+      Error: {error}
+    </Typography>
+    )
+
   if (!weatherData || !weatherData.lat || !weatherData.lon || !weatherData.timezone || !weatherData.current || !weatherData.timestamp) {
     return (
-      <>
-      <LayoutOverlayHeader>
-        <LayoutTitle size='small' component='span'>
-          Current Weather
-        </LayoutTitle>
-      </LayoutOverlayHeader>
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+      <Box display="flex" justifyContent="center" alignItems="center" height="100vh">
         <CircularProgress />
-      </div>
-    </>
+      </Box>
     )
   }
-
-  if (error) return (
-    <h5>Error: {error} </h5>
-  )
   return (
     <>
       <LayoutOverlayHeader>
