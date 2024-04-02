@@ -36,6 +36,8 @@ export default async function handler(
 ) {
 
   await NextCors(req, res, {
+    methods: ['GET'],
+    optionsSuccessStatus: 200,
     origin: true,
  });
 
