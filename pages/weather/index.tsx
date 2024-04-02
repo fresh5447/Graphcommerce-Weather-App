@@ -2,8 +2,6 @@ import { useState, useEffect } from 'react';
 import { StoreConfigDocument } from '@graphcommerce/magento-store'
 import { PageOptions } from '@graphcommerce/framer-next-pages'
 import {CircularProgress, Typography, Box} from '@mui/material';
-;
-
 
 import {
   GetStaticProps,
@@ -52,7 +50,6 @@ type GetPageStaticProps = GetStaticProps<LayoutNavigationProps, Props>
 function Weather() {
   
   const title = 'Otter Weather App'
-
   const [weatherData, setWeather] = useState<WeatherData | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string>('');
@@ -123,7 +120,6 @@ const pageOptions: PageOptions<LayoutNavigationProps> = {
 }
 
 Weather.pageOptions = pageOptions
-
 
 export default Weather
 

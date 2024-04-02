@@ -22,7 +22,6 @@ interface ErrorResponse {
   message: string;
 }
 
-
 const getTimestamp = () => {
   const now = new Date();
   const timeFormatted = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
@@ -40,7 +39,6 @@ export default async function handler(
     optionsSuccessStatus: 200,
     origin: true,
  });
-
 
   const apiKey = process.env.OPENWEATHER_API_KEY;
   const baseUrl = 'https://api.openweathermap.org/data/3.0/onecall';
@@ -88,5 +86,4 @@ export default async function handler(
     res.status(500).json({ message: errorMessage, });
   }
 }
-
 
