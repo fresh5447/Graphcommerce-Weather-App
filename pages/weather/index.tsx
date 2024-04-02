@@ -116,7 +116,7 @@ function Weather() {
         </LayoutTitle>
       </LayoutOverlayHeader>
       <PageMeta title='Current Weather' />
-      <WeatherDisplay {...weatherData} /> {/*  ISSUE Property 'timestamp' is missing in type '{ lat?: number | undefined; lon?: number | undefined; timezone?: string | undefined; current?: { temp: number; humidity: number; windSpeed: number; } | undefined; }' but required in type 'WeatherDisplayProps'.ts(2741) */}
+      <WeatherDisplay {...weatherData} />
     </>
   );
 };

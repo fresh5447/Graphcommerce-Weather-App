@@ -1,7 +1,7 @@
 import { Box, Typography, List, ListItem, ListItemIcon, ListItemText, Divider } from '@mui/material';
-import WbSunnyIcon from '@mui/icons-material/WbSunny'; // Example icon, choose appropriate ones
-import WaterIcon from '@mui/icons-material/Water'; // Humidity icon
-import AirIcon from '@mui/icons-material/Air'; // Wind speed icon
+import WbSunnyIcon from '@mui/icons-material/WbSunny';
+import WaterIcon from '@mui/icons-material/Water';
+import AirIcon from '@mui/icons-material/Air';
 
 interface WeatherDisplayProps {
   lat: number;
