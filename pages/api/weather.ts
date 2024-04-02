@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+import NextCors from 'nextjs-cors';
 
 interface CurrentWeather {
   temp: number;
@@ -33,6 +34,12 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<OpenWeatherResponse | ErrorResponse>
 ) {
+
+  await NextCors(req, res, {
+    origin: true,
+ });
+
+
   const apiKey = process.env.OPENWEATHER_API_KEY;
   const baseUrl = 'https://api.openweathermap.org/data/3.0/onecall';
 
