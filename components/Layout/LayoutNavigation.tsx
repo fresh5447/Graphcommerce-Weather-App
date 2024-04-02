@@ -141,6 +141,10 @@ export function LayoutNavigation(props: LayoutNavigationProps) {
                 <IconSvg src={iconChevronDown} />
               </DesktopNavItem>
 
+              <DesktopNavItem key={"weather-app"} href={"/weather"}>
+                Weather
+              </DesktopNavItem>
+
               <DesktopNavItem href='/blog'>
                 <Trans id='Blog' />
               </DesktopNavItem>
